@@ -13,6 +13,7 @@ RUN apt-get update && \
     openssl
 
 # PHP
+# @todo php5-intl
 RUN apt-get -y install curl \
     php5 \
     php5-cgi \
