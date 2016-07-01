@@ -1,2 +1,3 @@
 # docker-ubuntu-apache-php
-Create docker container with ubuntu base system and apache webserver + php 
+Docker image with ubuntu base system and apache webserver + php 
+
