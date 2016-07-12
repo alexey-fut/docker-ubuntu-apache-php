@@ -13,7 +13,6 @@ RUN apt-get update && \
     openssl
 
 # PHP
-# @todo php5-intl
 RUN apt-get -y install curl \
     php5 \
     php5-cgi \
@@ -27,7 +26,8 @@ RUN apt-get -y install curl \
     php5-mcrypt \
     php5-xmlrpc \
     php5-memcached \
-    php5-xdebug
+    php5-xdebug \
+    php5-intl
 
 # OPEN SSH
 RUN apt-get -y install openssh-server

@@ -19,4 +19,5 @@ PHP Packages:
 * php5-mcrypt \
 * php5-xmlrpc \
 * php5-memcached \
-* php5-xdebug
+* php5-xdebug \ 
+* php5-intl
