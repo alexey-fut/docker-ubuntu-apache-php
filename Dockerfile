@@ -10,7 +10,8 @@ RUN apt-get update && \
     apt-get -y install supervisor \
     apache2 \
     libapache2-mod-php5 \
-    openssl
+    openssl \
+    mcrypt
 
 # PHP
 RUN apt-get -y install curl \
@@ -28,6 +29,8 @@ RUN apt-get -y install curl \
     php5-memcached \
     php5-xdebug \
     php5-intl
+
+RUN sudo php5enmod mcrypt
 
 # OPEN SSH
 RUN apt-get -y install openssh-server
