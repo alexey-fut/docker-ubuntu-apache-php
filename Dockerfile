@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Manuel Reschke <manuel.reschke@unister.de>
+MAINTAINER Manuel Reschke <manuel.reschke90@gmail.com>
 
 ########################################################################################################################
 ### Install base packages and basic php extensions

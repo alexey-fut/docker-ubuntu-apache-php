@@ -1,5 +1,9 @@
 # docker-ubuntu-apache-php
-Docker image with ubuntu base system and apache webserver + php 
+Docker image with ubuntu base system and apache webserver + php.
+
+**Ubuntu 14.04.4 LTS with Apache2 (2.4.7) and PHP (5.5.9)**
+
+Ready to use docker container -> https://hub.docker.com/r/blackjack777/ubuntu-apache-php/
 
 Webserver Packages:
 * apache2
