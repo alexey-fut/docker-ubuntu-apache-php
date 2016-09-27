@@ -5,6 +5,10 @@ Docker image with ubuntu base system and apache webserver + php.
 
 Ready to use docker container -> https://hub.docker.com/r/blackjack777/ubuntu-apache-php/
 
+[![](https://images.microbadger.com/badges/image/blackjack777/ubuntu-apache-php.svg)](https://microbadger.com/images/blackjack777/ubuntu-apache-php "Get your own image badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/version/blackjack777/ubuntu-apache-php.svg)](https://microbadger.com/images/blackjack777/ubuntu-apache-php "Get your own version badge on microbadger.com")
+
 Webserver Packages:
 * apache2
 * libapache2-mod-php5
