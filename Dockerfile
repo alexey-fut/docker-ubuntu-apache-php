@@ -4,7 +4,13 @@ MAINTAINER Manuel Reschke <manuel.reschke90@gmail.com>
 ########################################################################################################################
 ### Install base packages and basic php extensions
 ########################################################################################################################
-ENV DEBIAN_FRONTEND noninteractive
+
+# Using ARG instead of ENV -> https://github.com/docker/docker/issues/4032
+ARG DEBIAN_FRONTEND=noninteractive
+
+# set xterm to use console applications normaly
+#ENV TERM xterm
+
 # SUPERVISOR + APACHE2
 RUN apt-get update && \
     apt-get -y install supervisor \
@@ -35,8 +41,22 @@ RUN sudo php5enmod mcrypt
 # OPEN SSH
 RUN apt-get -y install openssh-server
 
+# usefull extensions
+RUN apt-get -y install nano \
+    htop
+
 # CLEAN UP
 RUN apt-get clean
+
+########################################################################################################################
+### Set up BASH
+########################################################################################################################
+
+# append config to the .bashrc file
+COPY ./build/docker/bashrc.txt /tmp/bashrc.txt
+RUN touch /root/.bashrc \
+    && cat /tmp/bashrc.txt >> /root/.bashrc \
+    && rm -f /tmp/bashrc.txt
 
 ########################################################################################################################
 ### Apache and Supervisor configuration
